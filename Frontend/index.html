@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Customer Management</h1>
+            <button class="btn-add" onclick="showCustomerForm()">Add Customer</button>
+        </header>
+
+        <section id="customer-list" class="customer-list">
+            <h2>Customers</h2>
+            <table id="customers-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Loyalty Points</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customer-body">
+                    <!-- Customers will be loaded here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="customer-form" class="form-section">
+            <h2 id="form-title">Add New Customer</h2>
+            <form id="customerForm">
+                <input type="hidden" id="customerId" name="customerId">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+            <button onclick="hideCustomerForm()" class="btn-cancel">Cancel</button>
+        </section>
+    </div>
+
+    <!-- <div>
+        <button onclick="showFeedbackForm()">Add Feedback</button>
+        <button onclick="showReservationForm()">Add Reservation</button>
+        <button onclick="addLoyaltyPoints()">Add Loyalty Points</button>
+    </div> -->
+
+    <!-- Add Feedback Form -->
+    <!-- <div id="feedback-form" style="display:none;">
+        <h2>Add Feedback</h2>
+        <form id="feedbackForm">
+            <label for="customerIdFeedback">Customer ID:</label>
+            <input type="text" id="customerIdFeedback" required>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+            <button type="button" onclick="hideFeedbackForm()">Cancel</button>
+        </form>
+    </div> -->
+
+    <!-- Add Reservation Form -->
+    <!-- <div id="reservation-form" style="display:none;">
+        <h2>Add Reservation</h2>
+        <form id="reservationForm">
+            <label for="customerIdReservation">Customer ID:</label>
+            <input type="text" id="customerIdReservation" required>
+            <label for="reservationDate">Reservation Date:</label>
+            <input type="date" id="reservationDate" required>
+            <button type="submit">Submit Reservation</button>
+            <button type="button" onclick="hideReservationForm()">Cancel</button>
+        </form>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
